@@ -28,4 +28,15 @@ public class MyPortfolio {
                 <p>Node Js</p>
                 """;
     }
+    @GetMapping("/Education")
+    public String MyEducation(){
+        return """
+                <h1>My Education</h1>
+                <ul>
+                <li>10th - 90.2%</li>
+                <li>12th - 92%</li>
+                <li>B.Tech - 8.57 CGPA</li>
+                </ul>
+                """;
+    }
 }
