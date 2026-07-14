@@ -21,34 +21,11 @@ public class MyPortfolio {
                 <h1>My skills</h1>
                 <p>C++</p>
                 <p>Java</p>
+                <p>HTML</p>
+                <p>CSS</p>
                 <p>JavaScript</p>
                 <p>React Js</p>
                 <p>Node Js</p>
-                """;
-    }
-
-    @GetMapping("/Education")
-    public String MyEducation(){
-        return """
-                <h1>My Education</h1>
-                <ul>
-                <li>10th - 90.2%</li>
-                <li>12th - 92%</li>
-                <li>B.Tech - 87.5%</li>
-                </ul>
-                """;
-    }
-
-    @GetMapping("/Projects")
-    public String MyProjects(){
-        return """
-                <h1>My Projects</h1>
-                <ul>
-                <li>https://assignment-inside-iim-15x2.vercel.app/</li>
-                <li>https://mood-sync-navy.vercel.app</li>
-                <li>https://bucket-beryl.vercel.app</li>
-                <li>https://suduko-solver-iota.vercel.app</li>
-                <ul>
                 """;
     }
 }
