@@ -1,4 +1,4 @@
-package com.shrijal.demo;
+package com.shrijal.demo.Java;
 
 class P{
     void m1(){
