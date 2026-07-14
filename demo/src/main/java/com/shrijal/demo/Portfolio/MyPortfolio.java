@@ -39,4 +39,17 @@ public class MyPortfolio {
                 </ul>
                 """;
     }
+    @GetMapping("/Projects")
+    public String MyProjects(){
+        return """
+                <h1>My Projects</h1>
+                <ul>
+                <li>https://assignment-inside-iim-15x2.vercel.app/</li>
+                <li>https://mood-sync-navy.vercel.app</li>
+                <li>https://bucket-beryl.vercel.app</li>
+                <li>https://suduko-solver-iota.vercel.app</li>
+                <li>https://student-management-system-main-two.vercel.app/admin-dashboard</li>
+                <ul>
+                """;
+    }
 }
