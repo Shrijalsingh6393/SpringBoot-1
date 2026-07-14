@@ -8,7 +8,9 @@ public class MyPortfolio {
     public String Myself(){
         return """
                 <h1>Myself</h1>
-                <p>My name is Shrijal Singh</p>
+                <p>My name is Shrijal Singh. I am from Ghazipur, Uttar Pradesh. I have done 
+                my schooling from Foundation School, Buxar and currently I am pursuing B.Tech in
+                CSE from LPU.</p>
                 <ul>
                 <li><a>Leetcode - https://leetcode.com/u/buBiRnfIw0/</a></li>
                 <li><a>Github - https://github.com/Shrijalsingh6393</a></li>
@@ -33,9 +35,19 @@ public class MyPortfolio {
         return """
                 <h1>My Education</h1>
                 <ul>
-                <li>10th - 90.2%</li>
-                <li>12th - 92%</li>
-                <li>B.Tech - 8.57 CGPA</li>
+                <li>
+                <p>Foundation School</p>
+                <p>10th - 90.2%</p>
+                <p>Buxar, Bihar</p>
+                </li>
+                <li><p>Foundation School</p>
+                <p>12th - 92%</p>
+                <p>Buxar, Bihar</p>
+                </li>
+                <li><p>LPU</p>
+                <p>B.Tech - 8.57 CGPA</p>
+                <p>Phagwara,Punjab</p>
+                </li>
                 </ul>
                 """;
     }
@@ -44,10 +56,15 @@ public class MyPortfolio {
         return """
                 <h1>My Projects</h1>
                 <ul>
+                <li>1. AI Chatbot</li>
                 <li>https://assignment-inside-iim-15x2.vercel.app/</li>
+                <li>2. Mood Sync</li>
                 <li>https://mood-sync-navy.vercel.app</li>
+                <li>3. To do List</li>
                 <li>https://bucket-beryl.vercel.app</li>
+                <li>4. Suduko Solver</li>
                 <li>https://suduko-solver-iota.vercel.app</li>
+                <li>5. Smart Curriculum And Attendance App</li>
                 <li>https://student-management-system-main-two.vercel.app/admin-dashboard</li>
                 <ul>
                 """;
