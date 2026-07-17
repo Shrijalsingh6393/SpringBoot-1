@@ -1,4 +1,6 @@
-package com.shrijal.demo.StudentServer;
+package com.shrijal.demo.StudentServer.Service;
+import com.shrijal.demo.StudentServer.Entity.Student;
+import com.shrijal.demo.StudentServer.Repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +26,9 @@ public class StudentService {
         }
 
         return studentRepository.save(student);
+    }
+
+    public Student getStudentById(int id){
+        return studentRepository.findById(id).orElse(null);
     }
 }

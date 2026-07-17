@@ -1,10 +1,11 @@
-package com.shrijal.demo.StudentServer;
+package com.shrijal.demo.StudentServer.Controller;
 
+import com.shrijal.demo.StudentServer.Entity.Student;
+import com.shrijal.demo.StudentServer.Service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -27,5 +28,12 @@ public class StudentController {
             return ResponseEntity.status(400).body(result);
         }
         return ResponseEntity.status(201).body(result);
+    }
+
+    @GetMapping("/get/{id}")
+    public ResponseEntity<?> getStudent(@PathVariable int id){
+        Student student =  studentService.getStudentById(id);
+        return ResponseEntity.status(200).body(student);
+
     }
 }
