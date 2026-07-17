@@ -32,6 +32,7 @@ public class StudentService {
         return studentRepository.findById(id).orElse(null);
     }
 
+
     public Student updateStudent(int id, Student newStudent) {
 
         Student student = studentRepository.findById(id).orElse(null);
@@ -47,5 +48,13 @@ public class StudentService {
         return studentRepository.save(student);
     }
 
+    public boolean deleteStudent(int id) {
 
+        if (!studentRepository.existsById(id)) {
+            return false;
+        }
+
+        studentRepository.deleteById(id);
+        return true;
+    }
 }
