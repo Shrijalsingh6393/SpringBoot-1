@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
-//@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*")
 @RestController
 
 public class StudentController {

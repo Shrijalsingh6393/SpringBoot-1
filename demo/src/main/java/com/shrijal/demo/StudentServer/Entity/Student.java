@@ -1,33 +1,15 @@
 package com.shrijal.demo.StudentServer.Entity;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.time.LocalDateTime;
 
 @Entity
 public class Student {
-
     @Id
-    private int id;
-
-    private String name;
-
-    private int age;
-
-    private String department;
-
-    @CreationTimestamp
-    @Column(updatable = false)
-    private LocalDateTime createdAt;
-
-    @UpdateTimestamp
-    private LocalDateTime updatedAt;
-
-    // Getters and Setters
+    int id;
+    String name;
+    int age;
+    String department;
 
     public int getId() {
         return id;
@@ -59,13 +41,5 @@ public class Student {
 
     public void setDepartment(String department) {
         this.department = department;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
     }
 }
