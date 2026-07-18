@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
-
+//@CrossOrigin(origins = "*")
 @RestController
 
 public class StudentController {
@@ -50,7 +50,6 @@ public class StudentController {
         return ResponseEntity.ok(updatedStudent);
     }
 
-    // DELETE
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteStudent(@PathVariable int id) {
 
