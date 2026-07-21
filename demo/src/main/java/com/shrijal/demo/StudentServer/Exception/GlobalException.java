@@ -6,14 +6,31 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
-// telling service that its exception will be held by GlobalException
 public class GlobalException {
 
+    // Runtime Exception Handler
     @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<String> handleRuntimeExecutionException(RuntimeException e) {
+    public ResponseEntity<String> handleRuntimeException(RuntimeException e) {
 
         return ResponseEntity
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(e.getMessage());
+    }
+
+    // Checked Exception Handler
+    @ExceptionHandler(StudentCheckedException.class)
+    public ResponseEntity<String> handleStudentCheckedException(StudentCheckedException e) {
+
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(e.getMessage());
+    }
+
+    // Checked Exception Class
+    public static class StudentCheckedException extends Exception {
+
+        public StudentCheckedException(String message) {
+            super(message);
+        }
     }
 }
