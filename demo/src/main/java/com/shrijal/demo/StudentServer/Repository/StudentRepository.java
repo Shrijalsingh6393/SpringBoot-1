@@ -7,6 +7,7 @@ public interface StudentRepository extends JpaRepository<Student,Integer> {
 //        System.out.println("Student Information saved");
 //        return student;
 //    }
+boolean existsByEmail(String email);
 }
 
 

@@ -15,4 +15,5 @@ public class CreateStudentRequestDTO {
     private int age;
     @NotBlank(message = "Department is required")
     private String department;
+    private String email;
 }

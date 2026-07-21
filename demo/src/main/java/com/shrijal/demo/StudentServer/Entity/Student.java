@@ -48,10 +48,7 @@
 
 package com.shrijal.demo.StudentServer.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -66,6 +63,19 @@ public class Student {
     private String department;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+    @Column(unique = true, nullable = false)
+    private String email;
+
+    // Getter
+    public String getEmail() {
+        return email;
+    }
+
+    // Setter
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public LocalDateTime getCreatedAt() {
         return createdAt;

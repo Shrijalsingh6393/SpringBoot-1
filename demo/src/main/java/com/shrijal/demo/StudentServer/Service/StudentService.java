@@ -84,6 +84,9 @@ public class StudentService {
 
     public CreateStudentResponseDTO studentValidate(CreateStudentRequestDTO createStudentRequestDTO) {
 
+        if(studentRepository.existsByEmail(createStudentRequestDTO.getEmail())){
+            throw new RuntimeException("Email already exists");
+        }
         Student student = mapToStudent(createStudentRequestDTO);
 
         student = studentRepository.save(student);
@@ -133,6 +136,7 @@ public class StudentService {
         student.setDepartment(createStudentRequestDTO.getDepartment());
         student.setCreatedAt(LocalDateTime.now());
         student.setUpdatedAt(LocalDateTime.now());
+        student.setEmail(createStudentRequestDTO.getEmail());
 
         return student;
     }
@@ -145,7 +149,7 @@ public class StudentService {
         createStudentResponseDTO.setName(student.getName());
         createStudentResponseDTO.setAge(student.getAge());
         createStudentResponseDTO.setDepartment(student.getDepartment());
-
+        createStudentResponseDTO.setEmail(student.getEmail());
         return createStudentResponseDTO;
     }
 }

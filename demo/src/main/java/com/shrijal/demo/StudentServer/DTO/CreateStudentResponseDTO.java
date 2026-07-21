@@ -1,5 +1,7 @@
 package com.shrijal.demo.StudentServer.DTO;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,4 +12,7 @@ public class CreateStudentResponseDTO {
     private String name;
     private int age;
     private String department;
+    @Email(message = "Invalid Email")
+    @NotBlank(message = "Email is required")
+    private String email;
 }
