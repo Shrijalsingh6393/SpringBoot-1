@@ -95,9 +95,7 @@ public class StudentService {
     }
 
     public Student getStudentById(int id) {
-        Optional<Student> student = studentRepository.findById(id);  // if student exists -> student else null
-//        return studentRepository.findById(id).orElse(null);
-        return student.get();
+        return studentRepository.findById(id).orElse(null);
     }
 
     public Student updateStudent(int id, Student student) {

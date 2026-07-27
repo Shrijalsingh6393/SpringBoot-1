@@ -25,10 +25,10 @@ public class GlobalException {
     public ResponseEntity<ExceptionResponseDTO> handleRuntimeException(RuntimeException e, HttpServletRequest req) {
         ExceptionResponseDTO exceptionResponseDTO = new ExceptionResponseDTO(
                 LocalDateTime.now(),
-                HttpStatus.NOT_FOUND.value(),
-                HttpStatus.NOT_FOUND.getReasonPhrase(),
+                HttpStatus.INTERNAL_SERVER_ERROR.value(),
                 e.getMessage(),
-                req.getRequestURI()
+                req.getRequestURI(),
+                HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase()
         );
         return ResponseEntity
                 .status(500)
